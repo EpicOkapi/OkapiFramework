@@ -1,11 +1,9 @@
 import "reflect-metadata";
 
+import { injectable } from 'inversify';
+
 export interface ControllerConfig {
     path: string
-}
-
-export interface IController {
-    
 }
 
 export function Controller(path: string): ClassDecorator {
@@ -16,6 +14,8 @@ export function Controller(path: string): ClassDecorator {
             path: path
         };
 
-        return Reflect.defineMetadata('config', config, target);
+        Reflect.defineMetadata('config', config, target);
+
+        return injectable()(target);
     }
 }

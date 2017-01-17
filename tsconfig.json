@@ -21,15 +21,21 @@
     "compileOnSave": false,
     "buildOnSave": false,
     "files": [
-        "src/core/service.ts",
+        "src/config.ts",
+        "src/database/dbmanager.ts",
+        "src/database/entity.ts",
+        "src/database/migration.ts",
+        "src/database/repository.ts",
         "src/decorators/controller.ts",
         "src/decorators/route.ts",
         "src/decorators/service.ts",
         "src/server.ts",
+        "src/serverconfig.ts",
         "src/test.ts",
         "typings/globals/node/index.d.ts",
         "typings/index.d.ts",
-        "typings/modules/express/index.d.ts"
+        "typings/modules/express/index.d.ts",
+        "typings/modules/knex/index.d.ts"
     ],
     "exclude": [
         "node_modules"

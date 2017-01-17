@@ -1,6 +1,6 @@
 {
   "name": "okapiframework",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,14 +9,12 @@
   "author": "Lorenzo Vuur",
   "license": "ISC",
   "dependencies": {
-    "async": "^1.5.2",
     "express": "^4.14.0",
     "glob": "^7.0.0",
     "inversify": "^3.0.0",
     "knex": "^0.12.6",
-    "q": "^1.4.1",
-    "reflect-metadata": "^0.1.9",
-    "request": "^2.69.0"
+    "pg": "^6.1.2",
+    "reflect-metadata": "^0.1.9"
   },
   "devDependencies": {
     "del": "^2.2.0",

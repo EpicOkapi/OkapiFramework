@@ -1,5 +1,8 @@
-import { BaseService } from '../core/service';
+import { injectable } from 'inversify';
 
-export function Service(target: BaseService){
+export function Service(){
 
+    return function(target){
+        return injectable()(target);
+    }
 }
