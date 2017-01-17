@@ -1,4 +1,4 @@
-import * as client from "knex";
+import * as client from 'knex';
 import { inject, injectable } from 'inversify';
 
 import { ServerConfig } from '../serverconfig';

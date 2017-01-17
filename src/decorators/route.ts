@@ -2,7 +2,7 @@ import "reflect-metadata";
 
 import { Request, Response } from 'express';
 
-type Method = 'head' | 'get' | 'post' | 'put' | 'patch' | 'delete' | 'any';
+export type Method = 'head' | 'get' | 'post' | 'put' | 'patch' | 'delete' | 'any';
 
 export interface RouteConfig {
     method: string,

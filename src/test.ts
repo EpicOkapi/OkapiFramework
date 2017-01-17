@@ -5,6 +5,7 @@ import { Server } from './server';
 import { Repository } from './database/repository';
 import { Entity } from './database/entity';
 import { ServerConfig } from './serverconfig';
+import { DatabaseManager } from './database/dbmanager';
 
 import { injectable, inject } from 'inversify';
 import { Config } from 'knex';
@@ -20,7 +21,7 @@ interface Test extends Entity {
 
 class TestRepository extends Repository<Test> {
 
-    constructor(@inject('DatabaseManager') databaseManager){
+    constructor(@inject('DatabaseManager') databaseManager: DatabaseManager){
         super(databaseManager);
 
         this.tableName = 'test';
@@ -35,7 +36,7 @@ class TestRepository extends Repository<Test> {
 class TestService {
     private testNumber: number = 0;
 
-    constructor(@inject('TestRepository') private testRepository){
+    constructor(@inject('TestRepository') private testRepository: TestRepository){
 
     }
 

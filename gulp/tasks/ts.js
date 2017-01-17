@@ -7,7 +7,7 @@ gulp.task('ts', () => {
     var tsProject = $.typescript.createProject(conf.ts.configFile);
 
     return gulp.src(conf.ts.src)
-        .pipe(tsProject()).js
+        .pipe(tsProject())
         .pipe(gulp.dest(conf.ts.dist));
 });
 
