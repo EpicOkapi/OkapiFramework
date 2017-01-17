@@ -62,7 +62,7 @@ export class Server {
 
     letsGo(config: ServerConfig){
         this.container.bind('ServerConfig').toConstantValue(config);
-        this.container.bind('DatabaseManager').to(DatabaseManager);
+        this.container.bind('DatabaseManager').to(DatabaseManager).inSingletonScope();
 
         this.registerRoutes();
 
