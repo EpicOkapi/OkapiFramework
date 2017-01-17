@@ -33,7 +33,9 @@ export abstract class Repository<T extends Entity> implements IRepository<Entity
     }
 
     public findAll(fields?: string[]): Promise<T[]>{
-        return this.connection.select(...fields)
+        var query = fields ? this.connection.select(...fields) : this.connection.select();
+
+        return query
             .from(this.tableName);
     }
 
